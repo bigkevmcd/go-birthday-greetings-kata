@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/bigkevmcd/birthday-greetings-go"
+	"github.com/bigkevmcd/go-birthday-greetings-kata"
 )
 
 func main() {
