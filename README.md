@@ -1,4 +1,4 @@
 birthday-greetings-kata
 =======================
 
-Code for [https://github.com/xpmatteo/birthday-greetings-kata](birthday-greetings-kata) in Go.
+Code for [https://github.com/xpmatteo/birthday-greetings-kata](https://github.com/xpmatteo/birthday-greetings-kata) in Go.
