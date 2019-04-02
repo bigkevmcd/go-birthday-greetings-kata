@@ -2,6 +2,7 @@ package birthday
 
 import (
 	"encoding/csv"
+	"fmt"
 	"io"
 	"net"
 	"net/smtp"
@@ -52,5 +53,6 @@ func SendGreetings(filename string, now time.Time, smtpHost string, smtpPort int
 
 func sendMessage(smtpHost string, smtpPort int, sender, subject, body, recipient string) error {
 	smtpAddr := net.JoinHostPort(smtpHost, strconv.Itoa(smtpPort))
-	return smtp.SendMail(smtpAddr, nil, sender, []string{recipient}, []byte(body))
+	msg := []byte(fmt.Sprintf("To: %s\r\nSubject: %s\r\n\r\n"+"%s\r\n", recipient, subject, body))
+	return smtp.SendMail(smtpAddr, nil, sender, []string{recipient}, msg)
 }
